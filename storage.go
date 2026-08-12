@@ -17,7 +17,7 @@ func LoadTasks(filename string) ([]Task, error) {
 		return nil, fmt.Errorf("read tasks from file %q: %w", filename, err)
 	}
 
-	tasks := []Task{}
+	var tasks []Task
 	if err := json.Unmarshal(data, &tasks); err != nil {
 		return nil, fmt.Errorf("decode tasks from file %q: %w", filename, err)
 	}
