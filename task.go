@@ -6,11 +6,10 @@ import (
 )
 
 type Task struct {
-	ID        int `json:"id"`
+	ID        int    `json:"id"`
 	Title     string `json:"title"`
 	Completed bool   `json:"completed"`
 }
-
 
 func NextTaskID(tasks []Task) int {
 	highestTaskID := 0
@@ -32,7 +31,7 @@ func AddTask(tasks []Task, title string) ([]Task, error) {
 	}
 
 	task := Task{
-		ID:  NextTaskID(tasks),
+		ID:    NextTaskID(tasks),
 		Title: title,
 	}
 
@@ -54,7 +53,6 @@ func CompleteTask(tasks []Task, id int) ([]Task, error) {
 
 	return nil, fmt.Errorf("Task with ID %d not found", id)
 }
-
 
 // DeleteTask removes the task with the given ID (if found)
 func DeleteTask(tasks []Task, id int) ([]Task, error) {
