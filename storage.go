@@ -6,8 +6,8 @@ import (
 	"os"
 )
 
-// Loads tasks from a file with the given filename. Missing file means empty task list
-func LoadTasks(filename string) ([]Task, error) {
+// Fetches tasks from a file with the given filename. Missing file means empty task list
+func FetchTasks(filename string) ([]Task, error) {
 	data, err := os.ReadFile(filename)
 
 	if err != nil {
