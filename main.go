@@ -19,7 +19,7 @@ func main() {
 func run(args []string) error {
 	// at this point the main function has given us only the "args" we actually need ->
 	// add "Title"
-	// list .
+	// list
 	// complete TASK_ID
 	// delete TASK_ID
 
